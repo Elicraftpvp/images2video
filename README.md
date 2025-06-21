@@ -1,6 +1,6 @@
 # Gerador de Vídeo a partir de Sequência de Imagens
 
-Este script Python cria um vídeo no formato MP4 a partir de uma sequência de imagens numeradas localizadas em uma pasta específica.
+Este script Python cria um vídeo no formato MP4 a partir de uma sequência de imagens numeradas.
 
 ## 🚀 Funcionalidades
 
@@ -8,18 +8,17 @@ Este script Python cria um vídeo no formato MP4 a partir de uma sequência de i
 - Ordena as imagens numericamente.
 - Cria um vídeo MP4 com qualidade configurável.
 - Suporte a vários formatos de imagem: PNG, JPG, JPEG, BMP, TIFF.
-- Aviso sobre imagens com resoluções diferentes.
 
 ## 🗂️ Estrutura de Pastas
 
-\`\`\`
+```
 📂 SeuProjeto
  ┣ 📂 Images
- ┃ ┣ 📜 imagem_01.jpg
- ┃ ┣ 📜 imagem_02.jpg
- ┃ ┗ 📜 ...
- ┗ 📜 script.py
-\`\`\`
+ ┃ ┣ 🖼️ imagem_01.jpg
+ ┃ ┣ 🖼️ imagem_02.jpg
+ ┃ ┗ 🖼️ ...
+ ┗ ⚙️ script.py
+```
 
 ## ⚙️ Configurações no Script
 
@@ -34,18 +33,24 @@ Este script Python cria um vídeo no formato MP4 a partir de uma sequência de i
 - Python 3.x
 - Instale as dependências necessárias:
 
-\`\`\`bash
+```
 pip install imageio[ffmpeg]
-\`\`\`
+```
+
+Caso o de cima não funcione coloque diretamente na pasta a força
+
+``` bash
+"C:/Program Files/Python312/python.exe" -m pip install imageio[ffmpeg]
+```
 
 ## ▶️ Como Usar
 
-1. Coloque suas imagens numeradas na pasta \`Images\`.
+1. Coloque suas imagens numeradas na pasta ```Images```.
 2. Execute o script:
 
-\`\`\`bash
-python script.py
-\`\`\`
+```
+image2video.py
+```
 
 3. O vídeo gerado estará na mesma pasta das imagens, com o nome definido em \`NOME_VIDEO_SAIDA\`.
 
@@ -53,6 +58,6 @@ python script.py
 
 - Para mudar a qualidade, ajuste o valor de \`crf\` dentro da variável \`FFMPEG_PARAMS\`.  
 Valores recomendados:
-- \`0\` = Sem perdas (arquivo muito grande)
-- \`17-18\` = Visualmente sem perdas
-- \`23\` = Qualidade padrão
+- ```0``` = Sem perdas (arquivo muito grande)
+- ```17-18``` = Visualmente sem perdas
+- ```23``` = Qualidade padrão
